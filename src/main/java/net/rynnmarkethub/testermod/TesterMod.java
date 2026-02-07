@@ -1,6 +1,6 @@
 package net.rynnmarkethub.testermod;
 
-import net.rynnmarkethub.testermod.PTItem.ModItems;
+import net.rynnmarkethub.testermod.item.ModItems;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -111,6 +111,8 @@ public class TesterMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
             event.accept(ModItems.PLAYERCOMPASS);
+            event.accept(ModItems.ETERNAL_HEART);
+            event.accept(ModItems.HEART_ROCKET);
         }
     }
 
